@@ -1,0 +1,236 @@
+CIMEIRA — DOCUMENTACIÓN DE IMÁGENES DEL SITIO
+==============================================
+Generado el: 2025
+Formato: Archivo | Línea | Ruta local | Descripción
+------------------------------------------------------
+
+ESTRUCTURA DE CARPETAS REQUERIDA
+---------------------------------
+img/
+├── hero-oficina.jpg
+├── equipo-soporte.jpg
+├── logos/
+│   ├── cimeira-logo.png          ← Logo principal de CIMEIRA
+│   ├── dealto.svg
+│   ├── iberoasesores.svg
+│   ├── markher.svg
+│   ├── iramfra.svg
+│   ├── arine.svg
+│   ├── euro-asesores.svg
+│   ├── incestri.svg
+│   ├── grupo-bosque.svg
+│   ├── escotel.svg
+│   ├── jsca.svg
+│   └── bosque-escondido.svg
+├── servicios/
+│   ├── correo-corporativo.png
+│   ├── google-workspace.png
+│   ├── microsoft-365.webp
+│   ├── email-hosting.png
+│   ├── vps.png
+│   ├── windows-server.png
+│   └── dominios-dns.png
+├── casos/
+│   ├── caso-1.jpg
+│   ├── caso-2.jpg
+│   ├── caso-3.jpg
+│   └── caso-4.jpg
+└── tech/
+    ├── cpanel.png
+    ├── whm.svg
+    ├── cloudflare.png
+    ├── letsencrypt.svg
+    ├── linux.png
+    ├── windows-server.png
+    ├── imunify360.svg
+    ├── jetbackup.svg
+    ├── google-workspace.png
+    └── microsoft-365.svg
+
+TOTAL DE ARCHIVOS: 33
+
+
+NOTAS GENERALES
+---------------
+- Logos de clientes (.svg): pedir a cada empresa su kit de prensa
+- Logos de tecnología (.svg/.png): descargar de simpleicons.org
+- Fotos (.jpg): tamaño recomendado 1600×900 px (heroes), 1000×600 px (secciones)
+- Logos de servicios (.png / .webp): usar object-fit:contain — ya configurado
+- El logo de CIMEIRA en footer tiene filtro blanco aplicado por CSS
+- Logos de clientes en ticker tienen filtro blanco aplicado por CSS
+
+
+======================================================
+DETALLE POR ARCHIVO
+======================================================
+
+── index.html ──────────────────────────────────────
+  L 144  | img/logos/cimeira-logo.png        | Logo CIMEIRA (encabezado)
+  L 207  | img/hero-oficina.jpg              | Imagen de fondo hero principal — oficina/ambiente empresarial (1600×900 px)
+  L 241  | img/logos/dealto.svg              | Logo DeAlto / FSGT (ticker — 1ª copia)
+  L 245  | img/logos/iberoasesores.svg       | Logo Grupo Iberoasesores (ticker — 1ª copia)
+  L 249  | img/logos/markher.svg             | Logo Markher (ticker — 1ª copia)
+  L 253  | img/logos/iramfra.svg             | Logo IRAMFRA (ticker — 1ª copia)
+  L 257  | img/logos/arine.svg               | Logo Ariné (ticker — 1ª copia)
+  L 261  | img/logos/euro-asesores.svg       | Logo Euro Asesores (ticker — 1ª copia)
+  L 265  | img/logos/incestri.svg            | Logo INCESTRI (ticker — 1ª copia)
+  L 269  | img/logos/grupo-bosque.svg        | Logo Grupo Bosque (ticker — 1ª copia)
+  L 273  | img/logos/escotel.svg             | Logo Escotel (ticker — 1ª copia)
+  L 277  | img/logos/jsca.svg                | Logo JSCA (ticker — 1ª copia)
+  L 281  | img/logos/bosque-escondido.svg    | Logo Bosque Escondido (ticker — 1ª copia)
+  L 285  | img/logos/dealto.svg              | Logo DeAlto / FSGT (ticker — 2ª copia loop)
+  L 286  | img/logos/iberoasesores.svg       | Logo Grupo Iberoasesores (ticker — 2ª copia loop)
+  L 287  | img/logos/markher.svg             | Logo Markher (ticker — 2ª copia loop)
+  L 288  | img/logos/iramfra.svg             | Logo IRAMFRA (ticker — 2ª copia loop)
+  L 289  | img/logos/arine.svg               | Logo Ariné (ticker — 2ª copia loop)
+  L 290  | img/logos/euro-asesores.svg       | Logo Euro Asesores (ticker — 2ª copia loop)
+  L 291  | img/logos/incestri.svg            | Logo INCESTRI (ticker — 2ª copia loop)
+  L 292  | img/logos/grupo-bosque.svg        | Logo Grupo Bosque (ticker — 2ª copia loop)
+  L 293  | img/logos/escotel.svg             | Logo Escotel (ticker — 2ª copia loop)
+  L 294  | img/logos/jsca.svg                | Logo JSCA (ticker — 2ª copia loop)
+  L 295  | img/logos/bosque-escondido.svg    | Logo Bosque Escondido (ticker — 2ª copia loop)
+  L 319  | img/servicios/correo-corporativo.png | Tarjeta servicio: Correo Corporativo — bandeja de entrada / inbox
+  L 333  | img/servicios/google-workspace.png   | Tarjeta servicio: Google Workspace — interfaz Gmail / Drive
+  L 350  | img/servicios/microsoft-365.webp     | Tarjeta servicio: Microsoft 365 — Teams / Outlook / Office
+  L 367  | img/servicios/email-hosting.png      | Tarjeta servicio: Email Hosting — servidores / datacenter
+  L 384  | img/servicios/vps.png                | Tarjeta servicio: Servidores Cloud VPS — infraestructura cloud
+  L 398  | img/servicios/windows-server.png     | Tarjeta servicio: Windows Server 2022 — rack / sala de TI
+  L 416  | img/servicios/dominios-dns.png       | Tarjeta servicio: Dominios y DNS — URL en navegador / red global
+  L 447  | img/casos/caso-1.jpg             | Tarjeta caso de éxito 1 — imagen a definir (800×450 px)
+  L 462  | img/casos/caso-2.jpg             | Tarjeta caso de éxito 2 — imagen a definir (800×450 px)
+  L 477  | img/casos/caso-3.jpg             | Tarjeta caso de éxito 3 — imagen a definir (800×450 px)
+  L 492  | img/casos/caso-4.jpg             | Tarjeta caso de éxito 4 — imagen a definir (800×450 px)
+  L 512  | img/equipo-soporte.jpg           | Sección "¿Por qué CIMEIRA?" — foto de equipo de soporte (900×675 px)
+  L 553  | img/tech/cpanel.png              | Tech card: logo cPanel
+  L 560  | img/tech/whm.svg                 | Tech card: logo WHM
+  L 567  | img/tech/cloudflare.png          | Tech card: logo Cloudflare
+  L 574  | img/tech/letsencrypt.svg         | Tech card: logo Let's Encrypt
+  L 581  | img/tech/linux.png               | Tech card: logo Linux
+  L 588  | img/tech/windows-server.png      | Tech card: logo Windows Server
+  L 595  | img/tech/imunify360.svg          | Tech card: logo Imunify360
+  L 602  | img/tech/jetbackup.svg           | Tech card: logo JetBackup
+  L 609  | img/tech/google-workspace.png    | Tech card: logo Google Workspace
+  L 616  | img/tech/microsoft-365.svg       | Tech card: logo Microsoft 365
+  L 649  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── correo-corporativo.html ──────────────────────────
+  L  51  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 131  | img/servicios/correo-corporativo.png | Hero página — bandeja de entrada corporativa (700×420 px)
+  L 263  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── productividad.html ───────────────────────────────
+  L  63  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 160  | img/servicios/google-workspace.png  | Sección Google Workspace — interfaz Gmail / Drive (800×600 px)
+  L 192  | img/servicios/microsoft-365.webp    | Sección Microsoft 365 — Teams / Office en uso (800×600 px)
+  L 262  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── infraestructura.html ─────────────────────────────
+  L  54  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 116  | img/servicios/email-hosting.png  | Fondo hero — datacenter / racks de servidores (1600×900 px)
+  L 155  | img/servicios/email-hosting.png  | Sección Email Hosting — servidores de correo (800×600 px)
+  L 187  | img/servicios/vps.png            | Sección VPS — infraestructura cloud / fibra óptica (800×600 px)
+  L 220  | img/servicios/windows-server.png | Sección Windows Server — rack empresarial / sala TI (800×600 px)
+  L 279  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── clientes.html ────────────────────────────────────
+  L  73  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 174  | img/logos/dealto.svg             | Logo DeAlto / FSGT (grid de logos)
+  L 177  | img/logos/iberoasesores.svg      | Logo Grupo Iberoasesores (grid de logos)
+  L 178  | img/logos/markher.svg            | Logo Markher (grid de logos)
+  L 179  | img/logos/iramfra.svg            | Logo IRAMFRA (grid de logos)
+  L 180  | img/logos/arine.svg              | Logo Ariné (grid de logos)
+  L 181  | img/logos/euro-asesores.svg      | Logo Euro Asesores (grid de logos)
+  L 182  | img/logos/incestri.svg           | Logo INCESTRI (grid de logos)
+  L 183  | img/logos/grupo-bosque.svg       | Logo Grupo Bosque (grid de logos)
+  L 184  | img/logos/escotel.svg            | Logo Escotel (grid de logos)
+  L 185  | img/logos/jsca.svg               | Logo JSCA (grid de logos)
+  L 186  | img/logos/bosque-escondido.svg   | Logo Bosque Escondido (grid de logos)
+  L 202  | img/casos/caso-1.jpg             | Tarjeta caso de éxito 1 — imagen a definir (800×450 px)
+  L 214  | img/casos/caso-2.jpg             | Tarjeta caso de éxito 2 — imagen a definir (800×450 px)
+  L 226  | img/casos/caso-3.jpg             | Tarjeta caso de éxito 3 — imagen a definir (800×450 px)
+  L 238  | img/casos/caso-4.jpg             | Tarjeta caso de éxito 4 — imagen a definir (800×450 px)
+  L 318  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── contacto.html ────────────────────────────────────
+  L  58  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 220  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── caso-1.html ──────────────────────────────────────
+  L  61  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 125  | img/casos/caso-1.jpg             | Hero del caso — foto principal del cliente/proyecto (1600×685 px)
+  L 151  | img/casos/caso-2.jpg             | Imagen contextual del caso — oficina / equipo del cliente (1000×420 px)
+  L 179  | img/casos/caso-3.jpg             | Imagen de la solución implementada — proceso / migración (1000×420 px)
+  L 264  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── caso-2.html ──────────────────────────────────────
+  L  61  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 125  | img/casos/caso-1.jpg             | Hero del caso — foto principal del cliente/proyecto (1600×685 px)
+  L 151  | img/casos/caso-2.jpg             | Imagen contextual del caso — oficina / equipo del cliente (1000×420 px)
+  L 179  | img/casos/caso-3.jpg             | Imagen de la solución implementada — proceso / migración (1000×420 px)
+  L 264  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── caso-3.html ──────────────────────────────────────
+  L  61  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 125  | img/casos/caso-1.jpg             | Hero del caso — foto principal del cliente/proyecto (1600×685 px)
+  L 151  | img/casos/caso-2.jpg             | Imagen contextual del caso — oficina / equipo del cliente (1000×420 px)
+  L 179  | img/casos/caso-3.jpg             | Imagen de la solución implementada — proceso / migración (1000×420 px)
+  L 264  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+── caso-4.html ──────────────────────────────────────
+  L  61  | img/logos/cimeira-logo.png       | Logo CIMEIRA (encabezado)
+  L 125  | img/casos/caso-1.jpg             | Hero del caso — foto principal del cliente/proyecto (1600×685 px)
+  L 151  | img/casos/caso-2.jpg             | Imagen contextual del caso — oficina / equipo del cliente (1000×420 px)
+  L 179  | img/casos/caso-3.jpg             | Imagen de la solución implementada — proceso / migración (1000×420 px)
+  L 264  | img/logos/cimeira-logo.png       | Logo CIMEIRA (footer)
+
+
+======================================================
+RESUMEN DE ARCHIVOS ÚNICOS REQUERIDOS
+======================================================
+
+LOGOS (SVG recomendado)
+  img/logos/cimeira-logo.png         ← Logo principal CIMEIRA
+  img/logos/dealto.svg               ← Pedir a empresa
+  img/logos/iberoasesores.svg        ← Pedir a empresa
+  img/logos/markher.svg              ← Pedir a empresa
+  img/logos/iramfra.svg              ← Pedir a empresa
+  img/logos/arine.svg                ← Pedir a empresa
+  img/logos/euro-asesores.svg        ← Pedir a empresa
+  img/logos/incestri.svg             ← Pedir a empresa
+  img/logos/grupo-bosque.svg         ← Pedir a empresa
+  img/logos/escotel.svg              ← Pedir a empresa
+  img/logos/jsca.svg                 ← Pedir a empresa
+  img/logos/bosque-escondido.svg     ← Pedir a empresa
+
+TECNOLOGÍAS (descargar de simpleicons.org)
+  img/tech/cpanel.png
+  img/tech/whm.svg
+  img/tech/cloudflare.png
+  img/tech/letsencrypt.svg
+  img/tech/linux.png
+  img/tech/windows-server.png
+  img/tech/imunify360.svg
+  img/tech/jetbackup.svg
+  img/tech/google-workspace.png
+  img/tech/microsoft-365.svg
+
+SERVICIOS (logos o fotos según el tipo)
+  img/servicios/correo-corporativo.png   ← Foto (object-fit:cover)
+  img/servicios/google-workspace.png     ← Logo (object-fit:contain)
+  img/servicios/microsoft-365.webp       ← Logo (object-fit:contain)
+  img/servicios/email-hosting.png        ← Foto (object-fit:cover)
+  img/servicios/vps.png                  ← Logo o foto (object-fit:contain)
+  img/servicios/windows-server.png       ← Logo (object-fit:contain)
+  img/servicios/dominios-dns.png         ← Foto (object-fit:cover)
+
+FOTOS GENERALES (descargar 1600×900 px o mayor)
+  img/hero-oficina.jpg               ← Fondo hero principal
+  img/equipo-soporte.jpg             ← Sección "¿Por qué CIMEIRA?"
+
+CASOS DE ÉXITO (fotos a definir con el cliente)
+  img/casos/caso-1.jpg               ← Foto principal, contextual y solución
+  img/casos/caso-2.jpg               ← Foto principal, contextual y solución
+  img/casos/caso-3.jpg               ← Foto principal, contextual y solución
+  img/casos/caso-4.jpg               ← Foto principal, contextual y solución
+
+TOTAL ARCHIVOS: 33
