@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cimeira1/nuevo.cimeira.mx/
+    - /bin/rsync -avz --exclude '.git' ./ $DEPLOYPATH
