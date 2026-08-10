@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- ═══════════════════════════════════════════════════════════════
+     CIMEIRA · Hero + Contacto WhatsApp   (v6 — método Ricardo)
+     Tokens heredados de shared.css: Exo · Navy #0B1D3A · Azul #1A6EFF · Cian #00C4F4
+
+     ▸ PARA CODEPEN:
+       1. Panel HTML  → copia SOLO lo que está entre <body> y </body>
+       2. Panel CSS   → copia SOLO lo que está entre <style> y </style>
+       3. Panel JS    → copia SOLO lo que está entre <script> y </script>
+       4. Settings → HTML → Stuff for <head>: pega el <link> de la fuente Exo
+     ═══════════════════════════════════════════════════════════════ -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIMEIRA · Correo corporativo y servidores en la nube</title>
+
+<!-- ↓ Esto va en Settings → Stuff for <head> en CodePen -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+/* ══ TOKENS (idénticos a shared.css) ══════════════════════════ */
+:root{
+  --navy:#0B1D3A; --navy-mid:#0F2548; --navy-light:#162E56;
+  --white:#fff; --off-white:#F4F7FF; --muted:#7A8CA8; --subtle:#B5C4D8;
+  --blue:#1A6EFF; --blue-dark:#1258D0; --cyan:#00C4F4;
+  --cyan-dim:rgba(0,196,244,.14); --cyan-bdr:rgba(0,196,244,.28);
+  --wa:#25D366; --wa-dark:#128C7E;
+  --bdr-d:rgba(255,255,255,.08); --bdr-l:rgba(11,29,58,.1);
+  --font:'Exo',system-ui,sans-serif;
+  --r-sm:6px; --r-md:14px; --r-lg:22px; --r-xl:30px;
+  --ease:cubic-bezier(.4,0,.2,1); --t:.28s var(--ease);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--white);color:var(--navy);
+     font-size:clamp(15px,1.45vw,17px);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.container{width:min(1180px,92%);margin-inline:auto}
+
+/* ══ BOTONES ══════════════════════════════════════════════════ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+     padding:1rem 1.9rem;border:0;border-radius:var(--r-sm);cursor:pointer;
+     font-family:var(--font);font-size:.98rem;font-weight:700;letter-spacing:.01em;
+     transition:transform var(--t),box-shadow var(--t),background var(--t)}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#04301b;box-shadow:0 6px 22px rgba(37,211,102,.32)}
+.btn-wa:hover{background:#20c15c;box-shadow:0 10px 30px rgba(37,211,102,.45)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+.btn-ghost:hover{border-color:var(--cyan);background:rgba(0,196,244,.08)}
+.btn-solid{background:var(--blue);color:#fff;box-shadow:0 6px 22px rgba(26,110,255,.3)}
+.btn-solid:hover{background:var(--blue-dark)}
+
+/* ══ 1 · HERO ═════════════════════════════════════════════════
+   Firma visual: el muro de frases reales del cliente. No decimos
+   qué hacemos — mostramos lo que el prospecto ya está diciendo.  */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;
+      padding:calc(72px + 4.5rem) 0 4rem}
+.hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(900px 520px at 78% 12%,rgba(26,110,255,.30),transparent 62%),
+             radial-gradient(700px 480px at 8% 92%,rgba(0,196,244,.14),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.32;
+  background-image:linear-gradient(var(--bdr-d) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--bdr-d) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent);
+          mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent)}
+.hero-grid{position:relative;z-index:2;display:grid;gap:3.5rem;
+           grid-template-columns:1.05fr .95fr;align-items:center}
+
+.badge{display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--cyan-dim);border:1px solid var(--cyan-bdr);color:var(--cyan);
+  padding:.42rem 1rem;border-radius:999px;font-size:.76rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase}
+
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:800;line-height:1.08;
+         letter-spacing:-.025em;margin:1.4rem 0 1.1rem}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero-sub{color:var(--subtle);font-size:1.06rem;max-width:34rem;line-height:1.75}
+.hero-sub strong{color:#fff;font-weight:600}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.hero-note{margin-top:1.1rem;font-size:.84rem;color:var(--muted)}
+.hero-note b{color:var(--cyan);font-weight:600}
+
+/* Muro de frases — cada tarjeta es una objeción textual del deck */
+.quotes{display:flex;flex-direction:column;gap:.85rem}
+.quotes-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;
+              text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.q{position:relative;background:rgba(255,255,255,.045);border:1px solid var(--bdr-d);
+   border-left:3px solid var(--cyan);border-radius:0 var(--r-md) var(--r-md) 0;
+   padding:1rem 1.2rem;font-size:.95rem;line-height:1.55;color:#E6EEF9;
+   font-style:italic;transition:background var(--t),transform var(--t)}
+.q:hover{background:rgba(255,255,255,.08);transform:translateX(4px)}
+.q .ans{display:block;margin-top:.6rem;font-style:normal;font-size:.8rem;
+        font-weight:700;letter-spacing:.02em;color:var(--cyan)}
+.q .ans::before{content:"→ ";opacity:.7}
+
+/* Barra de prueba: números del deck de Ricardo */
+.proof{position:relative;z-index:2;margin-top:3.5rem;padding-top:2rem;
+  border-top:1px solid var(--bdr-d);display:grid;gap:1.5rem;
+  grid-template-columns:repeat(4,1fr)}
+.proof div p:first-child{font-size:1.6rem;font-weight:800;color:#fff;line-height:1.1}
+.proof div p:first-child span{color:var(--cyan)}
+.proof div p:last-child{font-size:.8rem;color:var(--muted);margin-top:.25rem}
+
+/* ══ 2 · CONTACTO / LÍNEAS DIRECTAS ═══════════════════════════ */
+.contacto{background:var(--off-white);padding:5rem 0}
+.sec-head{text-align:center;max-width:44rem;margin:0 auto 3rem}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.14em;
+         text-transform:uppercase;color:var(--blue)}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;
+             letter-spacing:-.02em;line-height:1.15;margin:.8rem 0 .9rem}
+.sec-head p{color:#4A5C77}
+
+.lineas{display:grid;gap:1.2rem;grid-template-columns:repeat(3,1fr)}
+.linea{display:flex;flex-direction:column;background:#fff;border:1px solid var(--bdr-l);
+       border-radius:var(--r-lg);padding:1.9rem 1.6rem;
+       transition:transform var(--t),box-shadow var(--t),border-color var(--t)}
+.linea:hover{transform:translateY(-4px);border-color:var(--cyan);
+             box-shadow:0 12px 40px rgba(11,29,58,.13)}
+.linea-ico{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;
+           background:var(--cyan-dim);color:var(--blue);font-size:1.25rem;margin-bottom:1.1rem}
+.linea h3{font-size:1.12rem;font-weight:700;margin-bottom:.45rem}
+.linea p{font-size:.9rem;color:#5A6B85;line-height:1.6;flex:1}
+.linea .horario{display:block;margin-top:1rem;font-size:.78rem;color:var(--muted);
+                font-weight:600;letter-spacing:.02em}
+.linea .btn{margin-top:1.2rem;width:100%;padding:.85rem 1rem;font-size:.9rem}
+.linea--fact{border-color:var(--cyan-bdr);background:
+  linear-gradient(180deg,rgba(0,196,244,.05),#fff 55%)}
+
+/* Callback: 3 campos, sin backend — arma un wa.me y abre WhatsApp */
+.callback{margin-top:1.6rem;background:var(--navy);border-radius:var(--r-xl);
+          padding:2.6rem 2rem;color:#fff;display:grid;gap:1.6rem;
+          grid-template-columns:1fr 1.25fr;align-items:center}
+.callback h3{font-size:1.45rem;font-weight:800;letter-spacing:-.015em;line-height:1.2}
+.callback p{color:var(--subtle);font-size:.92rem;margin-top:.6rem}
+.cb-form{display:grid;gap:.75rem;grid-template-columns:1fr 1fr}
+.cb-form label{font-size:.75rem;font-weight:700;letter-spacing:.08em;
+               text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.35rem}
+.cb-form input,.cb-form select{width:100%;padding:.8rem .9rem;border-radius:var(--r-sm);
+  border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);
+  color:#fff;font-family:var(--font);font-size:.92rem}
+.cb-form input::placeholder{color:#7A8CA8}
+.cb-form select option{background:var(--navy);color:#fff}
+.cb-form .full{grid-column:1/-1}
+.cb-form .btn{width:100%}
+.cb-legal{grid-column:1/-1;font-size:.74rem;color:var(--muted);text-align:center}
+
+/* Botón flotante permanente */
+.wa-float{position:fixed;right:1.2rem;bottom:1.2rem;z-index:900;
+  display:inline-flex;align-items:center;gap:.6rem;background:var(--wa);color:#04301b;
+  padding:.85rem 1.25rem;border-radius:999px;font-weight:700;font-size:.92rem;
+  box-shadow:0 8px 30px rgba(37,211,102,.42);transition:transform var(--t)}
+.wa-float:hover{transform:scale(1.05)}
+.wa-float svg{width:22px;height:22px;fill:currentColor}
+
+/* ══ RESPONSIVE ═══════════════════════════════════════════════ */
+@media(max-width:960px){
+  .hero-grid,.callback{grid-template-columns:1fr}
+  .proof{grid-template-columns:repeat(2,1fr)}
+  .lineas{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .cb-form{grid-template-columns:1fr}
+  .hero-ctas .btn{width:100%}
+  .wa-float span{display:none}
+  .wa-float{padding:.9rem;border-radius:50%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .btn:hover,.linea:hover,.q:hover{transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ════════ HERO ════════ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div>
+        <span class="badge">☁️ Desde donde te encuentres</span>
+        <h1>Tu empresa vive del correo.<br><em>Nosotros lo mantenemos vivo.</em></h1>
+        <p class="hero-sub">Correo corporativo con tu dominio, Google Workspace, Microsoft 365 y servidores en la nube — con <strong>precio claro desde el inicio</strong>, migración acompañada y una persona real contestándote por WhatsApp.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-wa" href="https://wa.me/5213318467345?text=Hola%20CIMEIRA%2C%20quiero%20platicar%20sobre%20el%20correo%20de%20mi%20empresa." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5L9.3 6.9c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.9.9-1.1 2-.8 3.3.7 2.7 3.4 5.8 6.6 6.9 2 .7 3 .6 3.9.4.6-.1 1.8-.7 2-1.5.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.7-.2z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Línea directa de WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#contacto">Quiero ser contactado</a>
+        </div>
+
+        <p class="hero-note">Te contesta un ingeniero, no un bot. <b>Lun–Vie 9:00–18:00 (CDMX)</b></p>
+      </div>
+
+      <!-- FIRMA: las frases textuales que usa Ricardo para calificar -->
+      <div class="quotes" aria-label="Situaciones que resolvemos">
+        <p class="quotes-label">¿Te suena alguna de estas?</p>
+
+        <blockquote class="q">“Mis correos llegan a spam o se caen a cada rato y el proveedor no me responde.”
+          <span class="ans">Servidor propio, reputación limpia y soporte que contesta</span></blockquote>
+
+        <blockquote class="q">“Compré un dominio en GoDaddy pero nunca pude usarlo.”
+          <span class="ans">Lo configuramos y te lo dejamos funcionando</span></blockquote>
+
+        <blockquote class="q">“Perdí información del servidor físico y no puede volver a pasar.”
+          <span class="ans">Windows Server en la nube + respaldo diario</span></blockquote>
+
+        <blockquote class="q">“Pago Google Workspace y no lo aprovecho.”
+          <span class="ans">Auditamos tu consola y bajamos el gasto en licencias</span></blockquote>
+      </div>
+
+    </div>
+
+    <div class="proof">
+      <div><p><span>+2,000</span></p><p>Cuentas de correo administradas</p></div>
+      <div><p><span>+150</span></p><p>Empresas en México y LATAM</p></div>
+      <div><p><span>+$35,000</span></p><p>Ahorrados en licencias a un solo cliente</p></div>
+      <div><p><span>0</span></p><p>Migraciones con pérdida de datos</p></div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ════════ CONTACTO ════════ -->
+<section class="contacto" id="contacto">
+  <div class="container">
+
+    <div class="sec-head">
+      <p class="eyebrow">Habla con nosotros</p>
+      <h2>Tres líneas directas. Cero formularios eternos.</h2>
+      <p>Elige por qué nos escribes y te llega directo con la persona que lo resuelve.</p>
+    </div>
+
+    <div class="lineas">
+
+      <article class="linea">
+        <div class="linea-ico" aria-hidden="true">💬</div>
+        <h3>Ventas y nuevos proyectos</h3>
+        <p>Correo corporativo, migraciones, Google Workspace, Microsoft 365, VPS y Windows Server. Cotización con precio final, sin “desde…”.</p>
+        <span class="horario">Lun–Vie · 9:00–18:00 CDMX</span>
+        <a class="btn btn-wa" target="_blank" rel="noopener"
+           href="https://wa.me/5213318467345?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20empresa.">Escribir a Ventas</a>
+      </article>
+
+      <article class="linea">
+        <div class="linea-ico" aria-hidden="true">🛠️</div>
+        <h3>Soporte técnico</h3>
+        <p>¿Un correo que no entra, un servidor lento, una configuración atorada? Diagnóstico por WhatsApp y conexión remota el mismo día.</p>
+        <span class="horario">Clientes activos · atención prioritaria</span>
+        <a class="btn btn-wa" target="_blank" rel="noopener"
+           href="https://wa.me/5213318467345?text=Hola%2C%20soy%20cliente%20CIMEIRA%20y%20necesito%20soporte%20t%C3%A9cnico.">Escribir a Soporte</a>
+      </article>
+
+      <article class="linea linea--fact">
+        <div class="linea-ico" aria-hidden="true">🧾</div>
+        <h3>Renovaciones y facturación</h3>
+        <p>Renovación de dominios, hosting y licencias. Factura mexicana en <strong>PDF y XML</strong>, cambio de datos fiscales y estado de cuenta.</p>
+        <span class="horario">Envía tu RFC y te facturamos el mismo día</span>
+        <a class="btn btn-wa" target="_blank" rel="noopener"
+           href="https://wa.me/5213318467345?text=Hola%2C%20es%20sobre%20renovaci%C3%B3n%20o%20facturaci%C3%B3n.%20Mi%20dominio%20es%3A%20">Escribir a Facturación</a>
+      </article>
+
+    </div>
+
+    <!-- Callback sin backend: arma el mensaje y abre WhatsApp -->
+    <div class="callback">
+      <div>
+        <h3>¿Prefieres que te busquemos nosotros?</h3>
+        <p>Déjanos tres datos y te contactamos en el horario que elijas. Sin cadenas de correos ni tickets.</p>
+      </div>
+
+      <div class="cb-form">
+        <div class="full">
+          <label for="cb-nombre">Nombre y empresa</label>
+          <input id="cb-nombre" type="text" placeholder="Ana López · Indestri" autocomplete="organization">
+        </div>
+        <div>
+          <label for="cb-tel">WhatsApp o teléfono</label>
+          <input id="cb-tel" type="tel" placeholder="33 1234 5678" autocomplete="tel">
+        </div>
+        <div>
+          <label for="cb-horario">Mejor horario</label>
+          <select id="cb-horario">
+            <option>Hoy por la mañana</option>
+            <option>Hoy por la tarde</option>
+            <option>Mañana temprano</option>
+            <option>Cualquier momento</option>
+          </select>
+        </div>
+        <div class="full">
+          <button class="btn btn-solid" id="cb-enviar" type="button">Quiero ser contactado →</button>
+        </div>
+        <p class="cb-legal">Solo usamos tus datos para contactarte. Nunca los compartimos.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Botón flotante -->
+<a class="wa-float" href="https://wa.me/5213318467345?text=Hola%20CIMEIRA%2C%20tengo%20una%20pregunta." target="_blank" rel="noopener" aria-label="Abrir chat de WhatsApp con CIMEIRA">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5L9.3 6.9c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.9.9-1.1 2-.8 3.3.7 2.7 3.4 5.8 6.6 6.9 2 .7 3 .6 3.9.4.6-.1 1.8-.7 2-1.5.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.7-.2z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+/* Callback → WhatsApp. Sin servidor, funciona igual en CodePen y en producción. */
+(function () {
+  var WA = '5213318467345';
+  var btn = document.getElementById('cb-enviar');
+
+  btn.addEventListener('click', function () {
+    var nombre  = document.getElementById('cb-nombre').value.trim();
+    var tel     = document.getElementById('cb-tel').value.trim();
+    var horario = document.getElementById('cb-horario').value;
+
+    if (!nombre || !tel) {
+      btn.textContent = 'Falta tu nombre y tu teléfono';
+      setTimeout(function(){ btn.textContent = 'Quiero ser contactado →'; }, 2200);
+      return;
+    }
+
+    var msg = 'Hola CIMEIRA, quiero que me contacten.\n' +
+              'Nombre: ' + nombre + '\n' +
+              'Teléfono: ' + tel + '\n' +
+              'Horario preferido: ' + horario;
+
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+</script>
+
+</body>
+</html>
