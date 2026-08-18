@@ -1,0 +1,11 @@
+# robots.txt — cimeira.mx
+# El subdominio de pruebas (nuevo.cimeira.mx) se bloquea por cabecera
+# X-Robots-Tag desde .htaccess, no desde aquí.
+
+User-agent: *
+Allow: /
+
+# No aporta nada a los buscadores
+Disallow: /*.json$
+
+Sitemap: https://cimeira.mx/sitemap.xml

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Logistics — Caso de éxito CIMEIRA</title>
+  <meta name="description" content="Connect Logistics tenía miedo de migrar por pérdidas de datos previas. Hoy opera con respaldos unificados diarios con JetBackup y antivirus web Imunify360.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Connect Logistics — Caso de éxito CIMEIRA">
+  <meta property="og:description" content="El miedo a perder datos otra vez los tenía detenidos. Migramos sin una sola caída y activamos respaldos diarios y protección contra ciberataques.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://cimeira.mx/caso-2">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'; connect-src 'self';">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+<style>
+    .caso-hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+    .caso-hero-img{width:100%;aspect-ratio:21/9;position:relative;overflow:hidden}
+    .caso-hero-img img{width:100%;height:100%;object-fit:cover;opacity:.45}
+    .caso-hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,29,58,.5) 0%,rgba(11,29,58,.95) 100%)}
+    .caso-hero-content{position:relative;z-index:1;padding:clamp(3rem,6vw,5rem) 0 clamp(3rem,5vw,4rem)}
+    .caso-body-layout{display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start;margin-top:4rem}
+    @media(max-width:900px){.caso-body-layout{grid-template-columns:1fr}}
+    /* Sidebar sticky */
+    .caso-sidebar{position:sticky;top:calc(var(--nav-h) + 2rem)}
+    .caso-sidebar-card{background:var(--off-white);border:1.5px solid var(--bdr-l);border-radius:var(--r-xl);padding:2rem;margin-bottom:1.25rem}
+    .sidebar-label{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:.5rem}
+    .sidebar-value{font-size:.9rem;font-weight:700;color:var(--navy)}
+    /* Sections */
+    .caso-section{margin-bottom:3rem}
+    .caso-section h2{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:2px solid var(--blue)}
+    .caso-section p{font-size:.92rem;color:#4A5568;line-height:1.8;margin-bottom:1rem}
+    .caso-section p:last-child{margin-bottom:0}
+    /* Sección de imagen dentro del caso */
+    .caso-img-block{margin:2rem 0;border-radius:var(--r-lg);overflow:hidden;position:relative}
+    .caso-img-block img{width:100%;max-height:420px;object-fit:cover;display:block}
+    .caso-img-caption{font-size:.75rem;color:var(--muted);margin-top:.5rem;text-align:center;font-style:italic}
+    /* Resultados highlight */
+    .resultados-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+    @media(max-width:600px){.resultados-grid{grid-template-columns:1fr 1fr}}
+    .resultado-box{background:#fff;border:1.5px solid var(--bdr-l);border-radius:var(--r-lg);padding:1.5rem;text-align:center}
+    .resultado-num{font-size:2rem;font-weight:800;color:var(--blue);line-height:1;display:block}
+    .resultado-label{font-size:.72rem;color:var(--muted);margin-top:.3rem;font-weight:600}
+    /* Bloque "¿Te suena familiar?" */
+    .caso-senales{background:var(--navy);border-radius:var(--r-lg);padding:2rem 2.25rem;margin:2.5rem 0}
+    .caso-senales h3{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);margin-bottom:1.2rem}
+    .caso-senales ul{display:flex;flex-direction:column;gap:1rem}
+    .caso-senales li{font-size:.95rem;color:#fff;line-height:1.7;padding-left:1.6rem;position:relative}
+    .caso-senales li::before{content:'\201C';position:absolute;left:0;top:.35rem;font-size:2rem;line-height:1;color:var(--cyan);opacity:.7}
+    /* Navegación entre casos */
+    .caso-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-top:1px solid var(--bdr-l);margin-top:3rem;flex-wrap:wrap;gap:1rem}
+    .caso-nav a{font-size:.85rem;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:.4rem;transition:gap var(--t)}
+    .caso-nav a:hover{gap:.65rem}
+  </style>
+</head>
+<body>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+<header class="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Navegación principal">
+    <a href="index.html" class="site-logo">
+      <img src="img/logos/cimeira-logo.png" alt="Logo CIMEIRA" width="120" height="40" style="object-fit:contain;max-height:40px;">
+    </a>
+    <div class="nav-links" role="list">
+      <a href="index.html" role="listitem">Inicio</a>
+      <a href="correo-corporativo.html" role="listitem">Correo Corporativo</a>
+      <div class="nav-dd" role="listitem">
+        <button aria-haspopup="true" aria-expanded="false" aria-controls="dd-prod">
+          Productividad en la nube
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="dd-menu" id="dd-prod" role="menu">
+          <li role="none"><a href="productividad.html#google-workspace" role="menuitem"><span class="dd-icon" aria-hidden="true"></span>Google Workspace</a></li>
+          <li role="none"><a href="productividad.html#microsoft-365" role="menuitem"><span class="dd-icon" aria-hidden="true"></span>Microsoft 365</a></li>
+        </ul>
+      </div>
+      <div class="nav-dd" role="listitem">
+        <button aria-haspopup="true" aria-expanded="false" aria-controls="dd-infra">
+          Infraestructura
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="dd-menu" id="dd-infra" role="menu">
+          <li role="none"><a href="infraestructura.html#email-hosting" role="menuitem"><span class="dd-icon" aria-hidden="true"></span>Email Hosting</a></li>
+          <li role="none"><a href="infraestructura.html#vps" role="menuitem"><span class="dd-icon" aria-hidden="true"></span>Servidores Cloud VPS</a></li>
+          <li role="none"><a href="infraestructura.html#windows-server" role="menuitem"><span class="dd-icon" aria-hidden="true"></span>Windows Server 2022</a></li>
+          <hr class="dd-sep" role="separator">
+          <li role="none"><a href="infraestructura.html#dominios" role="menuitem"><span class="dd-icon" aria-hidden="true"></span>Dominios y DNS</a></li>
+        </ul>
+      </div>
+      <a href="clientes.html" role="listitem">Clientes</a>
+      <a href="contacto.html" role="listitem">Contacto</a>
+    </div>
+    <a href="contacto.html" class="btn-nav">Mi cuenta →</a>
+    <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+</header>
+
+<nav id="mobile-nav" class="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="correo-corporativo.html">Correo Corporativo</a>
+  <details>
+    <summary>Productividad en la nube</summary>
+    <a href="productividad.html#google-workspace"><span aria-hidden="true"></span> Google Workspace</a>
+    <a href="productividad.html#microsoft-365"><span aria-hidden="true"></span> Microsoft 365</a>
+  </details>
+  <details>
+    <summary>Infraestructura</summary>
+    <a href="infraestructura.html#email-hosting"><span aria-hidden="true"></span> Email Hosting</a>
+    <a href="infraestructura.html#vps"><span aria-hidden="true"></span> Servidores Cloud VPS</a>
+    <a href="infraestructura.html#windows-server"><span aria-hidden="true"></span> Windows Server 2022</a>
+    <a href="infraestructura.html#dominios"><span aria-hidden="true"></span> Dominios y DNS</a>
+  </details>
+  <a href="clientes.html">Clientes</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" class="mobile-cta">Habla con un especialista →</a>
+</nav>
+
+<main id="contenido-principal" role="main">
+
+  <!-- HERO DEL CASO -->
+  <section class="caso-hero" aria-labelledby="caso-h1">
+    <div class="caso-hero-img">
+      <img src="img/casos/caso-2.jpg" alt="Caso de éxito de Connect Logistics con CIMEIRA" width="1600" height="686" loading="eager" fetchpriority="high">
+      <div class="caso-hero-ov" aria-hidden="true"></div>
+    </div>
+    <div class="container">
+      <div class="caso-hero-content">
+        <div style="margin-bottom:1rem;">
+          <span class="badge">Respaldos y ciberseguridad</span>
+        </div>
+        <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:.6rem;">Connect Logistics</p>
+        <h1 id="caso-h1" class="d1 anim-up" style="color:#fff;max-width:800px;margin-bottom:1rem;">Migración sin caídas y respaldos automáticos diarios</h1>
+        <p class="anim-up dl1" style="font-size:1.05rem;color:var(--subtle);max-width:600px;line-height:1.8;">El miedo a perder datos otra vez los tenía detenidos. Migramos sin una sola caída y activamos respaldos diarios y protección contra ciberataques.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="section" aria-label="Contenido del caso de éxito">
+    <div class="container">
+      <div class="caso-body-layout">
+
+        <!-- COLUMNA PRINCIPAL -->
+        <div>
+
+          <div class="caso-section">
+            <h2>El cliente</h2>
+            <p>Connect Logistics es una empresa de logística, cadena de suministro y renta de contenedores con base en Hermosillo, Sonora. Coordinan movimientos de carga donde la información —guías, tiempos, autorizaciones— viaja por correo entre operadores, clientes y transportistas.</p>
+            <p>En logística el retraso se mide en horas, y el correo es la bitácora de todo lo que se acordó.</p>
+          </div>
+
+          <div class="caso-section">
+            <h2>El problema</h2>
+            <p>Connect Logistics ya había perdido datos antes. Esa experiencia dejó una consecuencia concreta: miedo a migrar. Preferían quedarse en una infraestructura que no les convencía antes que arriesgarse a un segundo episodio de pérdida de información.</p>
+            <p>A eso se sumaba una postura débil en ciberseguridad. Sin respaldos automáticos confiables ni protección activa contra ataques web, cualquier incidente podía dejarlos sin su histórico de operación.</p>
+          </div>
+
+          <!-- Frases con las que este problema se reconoce -->
+          <div class="caso-senales">
+            <h3>¿Te suena familiar?</h3>
+            <ul>
+              <li>Los correos son MUY importantes para mi negocio</li>
+              <li>Alguien me vendió o compré dominio/<em>hosting</em>, pero necesito ayuda para mis colaboradores</li>
+            </ul>
+          </div>
+
+          <div class="caso-section">
+            <h2>Los retos</h2>
+            <p>El primer reto no era técnico sino de confianza: había que demostrar, paso a paso, que esta migración no repetiría la historia anterior.</p>
+            <p>En lo técnico, la operación no podía detenerse. La comunicación interna y con clientes debía seguir fluyendo durante todo el traslado, sin ventanas de correo caído.</p>
+          </div>
+
+          <div class="caso-section">
+            <h2>La solución</h2>
+            <p>Acompañamos la migración completa, sin caídas y con el cliente viendo cada etapa. Ninguna cuenta quedó fuera y no hubo periodo a ciegas.</p>
+            <p>Sobre la nueva infraestructura activamos respaldos unificados y automáticos diarios con JetBackup, y protección web con Imunify360 contra ciberataques. Los respaldos dejaron de depender de que alguien se acordara de hacerlos.</p>
+          </div>
+
+          <div class="caso-section">
+            <h2>Los resultados</h2>
+            <p>La comunicación interna mejoró porque el correo simplemente funciona. Y el temor que los tenía paralizados quedó resuelto: hoy existe una copia diaria de su información y una capa de seguridad vigilando el servidor.</p>
+            <div class="resultados-grid">
+              <div class="resultado-box">
+                <span class="resultado-num">0</span>
+                <span class="resultado-label">Caídas durante la migración</span>
+              </div>
+              <div class="resultado-box">
+                <span class="resultado-num">Diarios</span>
+                <span class="resultado-label">Respaldos automáticos con JetBackup</span>
+              </div>
+              <div class="resultado-box">
+                <span class="resultado-num">Activo</span>
+                <span class="resultado-label">Antivirus web Imunify360</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- NAVEGACIÓN ENTRE CASOS -->
+          <nav class="caso-nav" aria-label="Navegación entre casos de éxito">
+            <a href="caso-1.html">← Caso anterior</a>
+            <a href="clientes.html">Ver todos los casos</a>
+            <a href="caso-3.html">Siguiente caso →</a>
+          </nav>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="caso-sidebar" aria-label="Detalles del caso">
+          <div class="caso-sidebar-card">
+            <p class="sidebar-label">Cliente</p>
+            <p class="sidebar-value">Connect Logistics</p>
+          </div>
+          <div class="caso-sidebar-card">
+            <p class="sidebar-label">Industria</p>
+            <p class="sidebar-value">Logística, cadena de suministro y renta de contenedores</p>
+          </div>
+          <div class="caso-sidebar-card">
+            <p class="sidebar-label">Servicio implementado</p>
+            <p class="sidebar-value">Migración acompañada + JetBackup + Imunify360</p>
+          </div>
+          <div class="caso-sidebar-card">
+            <p class="sidebar-label">Alcance</p>
+            <p class="sidebar-value">Migración completa sin interrupciones</p>
+          </div>
+          <div class="caso-sidebar-card">
+            <p class="sidebar-label">Ubicación</p>
+            <p class="sidebar-value">Hermosillo, Sonora</p>
+          </div>
+          <div class="caso-sidebar-card" style="text-align:center;">
+            <p class="sidebar-label" style="margin-bottom:1rem;">Empresa</p>
+            <div class="logo-ph" style="width:160px;height:64px;margin:0 auto;padding:.4rem;background:#fff;">
+              <img src="img/logos/connect-logistics.png" alt="Logo Connect Logistics" loading="lazy">
+            </div>
+          </div>
+          <a href="contacto.html" class="btn btn-primary" style="width:100%;margin-top:.5rem;">¿Tienes un reto similar? →</a>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="site-logo" style="display:inline-flex;">
+          <img src="img/logos/cimeira-logo.png" alt="Logo CIMEIRA" width="100" height="34" style="object-fit:contain;max-height:34px;filter:brightness(0) invert(1);">
+        </a>
+        <p class="footer-tagline">Infraestructura digital para empresas que no pueden detenerse.</p>
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/cimeira.mx" target="_blank" rel="noopener noreferrer" aria-label="Facebook de CIMEIRA">f</a>
+          <a href="https://www.linkedin.com/company/cimeiramx" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de CIMEIRA">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="correo-corporativo.html">Correo Corporativo</a></li>
+          <li><a href="productividad.html#google-workspace">Google Workspace</a></li>
+          <li><a href="productividad.html#microsoft-365">Microsoft 365</a></li>
+          <li><a href="infraestructura.html#email-hosting">Email Hosting</a></li>
+          <li><a href="infraestructura.html#vps">Servidores Cloud VPS</a></li>
+          <li><a href="infraestructura.html#windows-server">Windows Server 2022</a></li>
+          <li><a href="infraestructura.html#dominios">Dominios y DNS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="https://cimeira.mx/politica-de-privacidad/" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="https://wa.me/5213314375233" target="_blank" rel="noopener noreferrer">WhatsApp Línea 1</a></li>
+          <li><a href="https://wa.me/5213310168926" target="_blank" rel="noopener noreferrer">WhatsApp Línea 2</a></li>
+          <li><a href="https://wa.me/5213318467345" target="_blank" rel="noopener noreferrer">Renovaciones y facturación</a></li>
+          <li><a href="mailto:contact@cimeira.mx">contact@cimeira.mx</a></li>
+          <li><a href="tel:+523314375233">+52 33 1437 5233</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CIMEIRA &copy; 2025. Todos los derechos reservados.</span>
+      <a href="https://cimeira.mx/politica-de-privacidad/" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
+    </div>
+  </div>
+</footer>
+<script src="shared.js"></script>
+<!-- CABECERAS HTTP: ver index.html. PENDIENTE: sitemap.xml · robots.txt. -->
+</body>
+</html>
